@@ -12,6 +12,9 @@ members = [
 ]
 
 [workspace.dependencies]
+edger_spec_schema = { path = "core/schema", version = "0.1.0" }
+edger_spec_dsl = { path = "core/schema", version = "0.1.0" }
+edger_spec_macro = { path = "core/schema", version = "0.1.0" }
 
 # Common
 snafu = "0.8.5"

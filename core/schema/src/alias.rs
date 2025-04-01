@@ -9,4 +9,4 @@ pub struct Alias {
     pub kind: Kind,
 }
 
-impl super::DebugDisplay for Alias {}
+impl crate::DebugDisplay for Alias {}

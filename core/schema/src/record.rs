@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use super::alias::{Alias, Name};
+use crate::{Alias, Name};
 
 pub type Field = Alias;
 
@@ -10,4 +10,4 @@ pub struct Record {
     pub fields: Vec<Field>,
 }
 
-impl super::DebugDisplay for Record {}
+impl crate::DebugDisplay for Record {}

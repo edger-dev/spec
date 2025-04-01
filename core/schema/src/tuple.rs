@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use super::alias::{Name, Kind};
+use crate::{Name, Kind};
 
 #[derive(Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize, Debug)]
 pub struct Tuple {
@@ -8,4 +8,4 @@ pub struct Tuple {
     pub fields: Vec<Kind>,
 }
 
-impl super::DebugDisplay for Tuple {}
+impl crate::util::DebugDisplay for Tuple {}
