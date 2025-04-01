@@ -13,7 +13,8 @@ pub fn parse_str(input: ParseStream, kind: &str) -> Result<String> {
     let name = if input.peek(Ident) {
         input.parse::<Ident>()?.to_string()
     } else if input.peek(LitStr) {
-        input.parse::<LitStr>()?.value()
+        let text = input.parse::<LitStr>()?.value();
+        format!("`{text}`")
     } else {
         return Result::Err(Error::new(input.span(), format!("Invalid {kind}")));
     };
